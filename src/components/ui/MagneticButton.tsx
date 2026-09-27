@@ -33,7 +33,7 @@ export function MagneticButton({ children, className, ...props }: MagneticButton
       animate={{ x: position.x, y: position.y }}
       transition={{ type: "spring", stiffness: 350, damping: 25, mass: 0.5 }}
       className={cn("magnetic-target relative", className)}
-      {...props}
+      {...(props as any)}
     >
       {children}
     </motion.button>
@@ -68,7 +68,7 @@ export function MagneticLink({ children, className, ...props }: MagneticLinkProp
       animate={{ x: position.x, y: position.y }}
       transition={{ type: "spring", stiffness: 350, damping: 25, mass: 0.5 }}
       className={cn("magnetic-target relative block", className)}
-      {...props}
+      {...(props as any)}
     >
       {children}
     </motion.a>

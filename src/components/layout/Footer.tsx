@@ -14,7 +14,7 @@ export function Footer() {
           WebkitTextStroke: "1px rgba(255,255,255,0.3)",
           scale: 1.02,
           textShadow: "0 0 40px rgba(124, 92, 255, 0.4)",
-        }}
+        } as any}
         transition={{ duration: 0.5, ease: "easeOut" }}
       >
         KIRTAN
