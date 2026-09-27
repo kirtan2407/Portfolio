@@ -1,29 +1,55 @@
 :root {
-  /* Surfaces */
-  --bg-base: #05050a;
-  --bg-elevated: #0b0b16;
-  --bg-radial-glow: radial-gradient(ellipse at top, #14142b 0%, #05050a 60%);
+  /* LIGHT MODE (Clean, Productive, Vercel/Linear aesthetic) */
+  --bg-base: #fafafa;
+  --bg-elevated: #ffffff;
+  --bg-radial-glow: radial-gradient(ellipse at top, #ebebeb 0%, #fafafa 70%);
 
-  /* Text */
-  --text-primary: #f2f2f7;
-  --text-secondary: #9a9ab0;
-  --text-muted: #5c5c72;
+  --text-primary: #171717;
+  --text-secondary: #737373;
+  --text-muted: #a3a3a3;
 
-  /* Accent — "Aurora" gradient, the ONE splash of color on the site */
-  --accent-violet: #7c5cff;
-  --accent-cyan: #22d3ee;
-  --accent-gradient: linear-gradient(120deg, var(--accent-violet), var(--accent-cyan));
+  /* Sleek, professional accents */
+  --accent-violet: #4f46e5; 
+  --accent-cyan: #0ea5e9;
+  --accent-gradient: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
 
-  /* Glass surface */
-  --glass-bg: rgba(255, 255, 255, 0.04);
-  --glass-border: rgba(255, 255, 255, 0.09);
+  --glass-bg: rgba(255, 255, 255, 0.7);
+  --glass-border: rgba(0, 0, 0, 0.08);
+  --glass-blur: 24px;
+
+  --shadow-glow: 0 0 40px rgba(0, 0, 0, 0.04);
+  --shadow-ambient: 0 20px 60px rgba(0, 0, 0, 0.05);
+
+  --radius-card: 16px;
+  --radius-pill: 999px;
+
+  --surface-alpha: rgba(0, 0, 0, 0.03);
+  --surface-alpha-hover: rgba(0, 0, 0, 0.06);
+  --border-alpha: rgba(0, 0, 0, 0.1);
+}
+
+.dark {
+  /* DARK MODE (OLED Black, high contrast) */
+  --bg-base: #000000;
+  --bg-elevated: #0a0a0a;
+  --bg-radial-glow: radial-gradient(ellipse at top, #111111 0%, #000000 70%);
+
+  --text-primary: #ededed;
+  --text-secondary: #a1a1aa;
+  --text-muted: #71717a;
+
+  --accent-violet: #818cf8;
+  --accent-cyan: #38bdf8;
+  --accent-gradient: linear-gradient(135deg, var(--accent-cyan), var(--accent-violet));
+
+  --glass-bg: rgba(255, 255, 255, 0.03);
+  --glass-border: rgba(255, 255, 255, 0.08);
   --glass-blur: 20px;
 
-  /* Glow shadows */
-  --shadow-glow: 0 0 40px rgba(124, 92, 255, 0.25);
-  --shadow-ambient: 0 20px 60px rgba(0, 0, 0, 0.45);
+  --shadow-glow: 0 0 40px rgba(56, 189, 248, 0.15);
+  --shadow-ambient: 0 20px 60px rgba(0, 0, 0, 0.8);
 
-  /* Radii */
-  --radius-card: 20px;
-  --radius-pill: 999px;
+  --surface-alpha: rgba(255, 255, 255, 0.04);
+  --surface-alpha-hover: rgba(255, 255, 255, 0.08);
+  --border-alpha: rgba(255, 255, 255, 0.12);
 }

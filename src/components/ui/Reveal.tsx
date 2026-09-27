@@ -26,9 +26,11 @@ export function Reveal({ children, className }: RevealProps) {
       }
 
       const elements = containerRef.current?.children;
-      if (!elements) return;
+      if (!elements || elements.length === 0) return;
 
-      gsap.from(elements, {
+      const targetElements = gsap.utils.toArray(elements);
+
+      gsap.from(targetElements, {
         scrollTrigger: {
           trigger: containerRef.current,
           start: "top 80%",

@@ -20,8 +20,6 @@ export function Experience() {
     <section id="experience" className="py-24 px-6 md:px-16 max-w-7xl mx-auto w-full">
       <SectionHeading title="Experience" />
       
-      <Reveal className="relative flex flex-col gap-12" />
-      
       <div ref={containerRef} className="relative ml-4 md:ml-0 flex flex-col gap-12 mt-12">
         {/* Animated Vertical Line */}
         <div className="absolute left-0 top-2 bottom-0 w-[1px] bg-white/10">

@@ -57,13 +57,13 @@ export function CustomCursor() {
       <style dangerouslySetInnerHTML={{ __html: "body { cursor: none; }" }} />
       {/* Outer Ring */}
       <motion.div
-        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-white/50 pointer-events-none z-[9999]"
+        className="fixed top-0 left-0 w-8 h-8 rounded-full border border-text-primary/50 pointer-events-none z-[9999]"
         style={{
           x: ringX,
           y: ringY,
           translateX: "-50%",
           translateY: "-50%",
-          mixBlendMode: isHovering ? "difference" : "normal",
+          mixBlendMode: "difference",
           backgroundColor: isHovering ? "white" : "transparent",
         }}
         animate={{
@@ -76,8 +76,9 @@ export function CustomCursor() {
       />
       {/* Inner Dot */}
       <motion.div
-        className="fixed top-0 left-0 w-2 h-2 bg-white rounded-full pointer-events-none z-[9999]"
+        className="fixed top-0 left-0 w-2 h-2 rounded-full pointer-events-none z-[9999]"
         style={{
+          backgroundColor: "var(--text-primary)",
           x: dotX,
           y: dotY,
           translateX: "-50%",

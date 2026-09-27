@@ -1,9 +1,10 @@
 "use client";
 
 import React, { useEffect, useState } from "react";
-import { Download } from "lucide-react";
+import { Download, Moon, Sun } from "lucide-react";
 import { motion, useScroll, useTransform } from "framer-motion";
 import { MagneticLink } from "../ui/MagneticButton";
+import { useTheme } from "next-themes";
 
 const navLinks = [
   { name: "About", href: "#about" },
@@ -16,6 +17,12 @@ const navLinks = [
 export function Navbar() {
   const { scrollY, scrollYProgress } = useScroll();
   const [activeSection, setActiveSection] = useState("");
+  const { theme, setTheme } = useTheme();
+  const [mounted, setMounted] = useState(false);
+
+  useEffect(() => {
+    setMounted(true);
+  }, []);
 
   // Ramps up blur and background opacity as user scrolls past 60px
   const bgOpacity = useTransform(scrollY, [0, 60], [0, 0.04]);
@@ -84,6 +91,14 @@ export function Navbar() {
           })}
         </ul>
         
+        <button
+          onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          className="hidden md:flex items-center justify-center w-10 h-10 rounded-full bg-white/10 hover:bg-white/20 transition-colors text-text-primary"
+          aria-label="Toggle theme"
+        >
+          {mounted && (theme === "dark" ? <Sun className="w-4 h-4" /> : <Moon className="w-4 h-4" />)}
+        </button>
+
         <MagneticLink
           href="/resume-kirtan-kankotiya.pdf"
           target="_blank"

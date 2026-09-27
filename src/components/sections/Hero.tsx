@@ -4,11 +4,6 @@ import React from "react";
 import { heroData } from "@/lib/data";
 import { motion } from "framer-motion";
 import { MagneticLink } from "../ui/MagneticButton";
-
-import dynamic from "next/dynamic";
-
-const HeroCanvas = dynamic(() => import("../three/HeroCanvas"), { ssr: false });
-
 export function Hero() {
   const words = heroData.headline.split(" ");
   
@@ -37,10 +32,9 @@ export function Hero() {
   };
 
   return (
-    <section className="relative min-h-screen flex flex-col justify-center pt-20 px-6 md:px-16 max-w-7xl mx-auto w-full">
-      <HeroCanvas />
+    <section className="relative min-h-screen flex flex-col justify-center pt-20 px-6 md:px-16 max-w-7xl mx-auto w-full pointer-events-none">
       
-      <div className="relative z-10 max-w-3xl">
+      <div className="relative z-10 max-w-3xl pointer-events-auto">
         <motion.p 
           initial={{ opacity: 0, y: 20 }}
           animate={{ opacity: 1, y: 0 }}

@@ -11,6 +11,9 @@
   --color-text-muted: var(--text-muted);
   --color-accent-violet: var(--accent-violet);
   --color-accent-cyan: var(--accent-cyan);
+  --color-surface-alpha: var(--surface-alpha);
+  --color-surface-alpha-hover: var(--surface-alpha-hover);
+  --color-border-alpha: var(--border-alpha);
   --background-image-accent-gradient: var(--accent-gradient);
   --background-image-radial-glow: var(--bg-radial-glow);
   --font-sans: "Inter", var(--font-geist-sans), sans-serif;
